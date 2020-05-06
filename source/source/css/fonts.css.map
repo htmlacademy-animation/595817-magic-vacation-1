@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,UAAU;EACR,WAAW,EAAE,cAAc;EAC3B,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,YAAY,EAAE,IAAI;EAClB,GAAG,EAAE,0CAA0C,CAAC,eAAe,EAAE,yCAAyC,CAAC,cAAc;;;AAG3H,UAAU;EACR,WAAW,EAAE,SAAS;EACtB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,YAAY,EAAE,IAAI;EAClB,GAAG,EAAE,6BAA6B,CAAC,eAAe,EAAE,4BAA4B,CAAC,cAAc",
-    "sources": [
-        "../scss/general/fonts.scss"
-    ],
-    "names": [],
-    "file": "fonts.css"
-}
