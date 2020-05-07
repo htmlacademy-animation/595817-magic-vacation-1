@@ -204,7 +204,7 @@
     color: $c-purple;
     background-color: $c-light;
     border-color: $c-light;
-    transition: 2s;
+    transition: opacity 2s linear o;
   }
 
   svg {
@@ -248,8 +248,8 @@
 
   &--vk {
     animation-name: fadeInBottom;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-delay: 1.1s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
     bottom: -50px;
