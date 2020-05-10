@@ -93,6 +93,11 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  animation-name: fadeIn;
+  animation-duration: .8s;
+  animation-fill-mode: both;  
+  opacity: 0;
+  margin-bottom: -30px;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -160,5 +165,14 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
+  }
+}
+.screen__footer {
+  margin-bottom: -40px;
+  transition: margin-bottom 1s cubic-bezier(.7, .08, .02, 1.1);
+}
+.ready {
+  .screen__footer {    
+    margin-bottom: 0;    
   }
 }
