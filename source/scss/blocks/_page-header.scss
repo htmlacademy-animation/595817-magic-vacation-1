@@ -7,8 +7,7 @@
   z-index: 10;
   margin-top: -125px;
   transition: margin-top 1s cubic-bezier(.7, .08, .02, 1.1);
-   
-  
+
   @media (min-width: $stop-scaling) {
     padding: 27px 0;
   }
@@ -21,11 +20,13 @@
     padding: 0.9rem 0;
   }
 }
+
 .ready {
   .page-header {
     margin-top: 0; 
   }
 }
+
 .page-header__wrapper {
   @include container;
   display: flex;
