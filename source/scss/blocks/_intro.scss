@@ -167,3 +167,14 @@
     font-size: 48px;
   }
 }
+
+.screen__footer {
+  margin-bottom: -40px;
+  transition: margin-bottom 1s cubic-bezier(.7, .08, .02, 1.1);
+}
+.ready {
+  .screen__footer {    
+    margin-bottom: 0;    
+  }
+}
+
