@@ -29,11 +29,9 @@ module.exports = {
     filename: 'js/script.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.s[a|c]ss$/,
-        use: [
-          {
+        use: [{
             loader: MiniCssExtractPlugin.loader,
           },
           {
@@ -45,14 +43,15 @@ module.exports = {
           },
           {
             loader: "sass-loader",
-            options: { sourceMap: true },
+            options: {
+              sourceMap: true
+            },
           }
         ],
       },
       {
         test: /\.css$/,
-        use: [
-          {
+        use: [{
             loader: MiniCssExtractPlugin.loader,
           },
           {
@@ -66,8 +65,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [
-          {
+        use: [{
             loader: 'html-loader',
             options: {
               attributes: false
@@ -77,7 +75,9 @@ module.exports = {
             loader: 'posthtml-loader',
             options: {
               plugins: [
-                require('posthtml-include')({ root: 'source' })
+                require('posthtml-include')({
+                  root: 'source'
+                })
               ]
             }
           }
@@ -98,8 +98,7 @@ module.exports = {
     new CssoWebpackPlugin({
       pluginOutputPostfix: 'min'
     }),
-    new CopyPlugin([
-      {
+    new CopyPlugin([{
         from: "source/fonts/**/*.{woff,woff2}",
         to: path.join(__dirname, 'build', 'fonts'),
         flatten: true,
