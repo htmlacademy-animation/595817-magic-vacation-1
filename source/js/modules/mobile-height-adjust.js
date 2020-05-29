@@ -8,5 +8,3 @@ export default () => {
 
   window.addEventListener(`resize`, setVH);
 };
-
- 
