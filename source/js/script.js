@@ -37,5 +37,4 @@ document.addEventListener(`DOMContentLoaded`, function () {
       setTimeout(() => document.querySelector(`.intermediate-bg`).style.height = `0`, 500);
     }
   });
-
 });

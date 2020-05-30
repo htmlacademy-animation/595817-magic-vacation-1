@@ -59,7 +59,65 @@
   transition: height .4s ease;
   z-index: 99999;
 }
+.rules__item {
+  transition: width 1s linear 1s;
+}
+.rules__item:before {
+  transform: scale(0);  
+}
+.active .rules__item:before {
+  animation-name: circleWidth;
+  animation-duration: .2s;
+  animation-fill-mode: forwards;
+  animation-delay: .3s;
+}
+.active .rules__item > p {
+    animation-name: textFadeRight;
+    opacity: 0;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-delay: .8s;
+}
+.active .rules__item:nth-child(2):before,
+.active .rules__item:nth-child(2) > p {
+  animation-delay: 1.05s;
+}
+.active .rules__item:nth-child(3):before,
+.active .rules__item:nth-child(3) > p {
+  animation-delay: 1.3s;
+}
+.active .rules__item:nth-child(4):before,
+.active .rules__item:nth-child(4)>p {
+  animation-delay: 1.55s;
+}
+.active .rules__link {
+  animation-name: widthBtn;
+  opacity: 0;
+  width: 0;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  max-width: 240px;
+}
+@keyframes widthBtn {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+@keyframes circleWidth {
+  0% {
+    transform: scale(0);
+  }
 
+  100% {
+   transform: scale(1);
+  }
+}
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
@@ -81,6 +139,18 @@
   100% {
     opacity: 1;
     margin-bottom: 0;
+  }
+}
+
+@keyframes textFadeRight {
+  0% {
+    opacity: 0;
+    margin-left: 30px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0;
   }
 }
 
