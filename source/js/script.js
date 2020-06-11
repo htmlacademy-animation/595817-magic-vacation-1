@@ -29,7 +29,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
     if (e.target.dataset.href === `prizes` || e.target.dataset.href === `game`) {
       document.querySelector(`.intermediate-bg`).style.height = `100%`;
       setTimeout(function () {
-        document.querySelector(`.intermediate-bg`).style.height = `0`
+        document.querySelector(`.intermediate-bg`).style.height = `0`;
       }, 500);
     }
   });
