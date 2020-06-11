@@ -61,6 +61,7 @@
 }
 .rules__item {
   transition: width 1s linear 1s;
+  overflow: hidden;
 }
 .rules__item:before {
   transform: scale(0);  
@@ -72,15 +73,16 @@
   animation-delay: .3s;
 }
 .active .rules__item > p {
-    animation-name: textFadeRight;
+    animation-name: rulesText;
     opacity: 0;
     animation-duration: .4s;
     animation-fill-mode: forwards;
-    animation-delay: .8s;
+    animation-delay: .4s;
+    animation-timing-function: linear;    
 }
 .active .rules__item:nth-child(2):before,
 .active .rules__item:nth-child(2) > p {
-  animation-delay: 1.05s;
+  animation-delay: 0.9s;
 }
 .active .rules__item:nth-child(3):before,
 .active .rules__item:nth-child(3) > p {
@@ -88,25 +90,100 @@
 }
 .active .rules__item:nth-child(4):before,
 .active .rules__item:nth-child(4)>p {
-  animation-delay: 1.55s;
+  animation-delay: 1.7s;
+}
+.rules {
+  overflow: hidden;
+}
+.rules__link::before {
+  transition-duration: .5s;
+}
+.rules__link:hover::before {
+  width: 105%;
+  height: 105%;
 }
 .active .rules__link {
   animation-name: widthBtn;
+  color: #fff;
   opacity: 0;
-  width: 0;
-  animation-duration: 3s;
+  transform: translate(80%);
+  animation-duration: .3s;
   animation-fill-mode: forwards;
   animation-delay: 2s;
-  max-width: 240px;
+  animation-timing-function: linear;
+}
+@media (max-width: $tablet) {
+  .active .rules__item:nth-child(2):before {
+    animation-delay: 1s;
+  }
+
+  .active .rules__item:nth-child(3):before {
+    animation-delay: 1.4s;
+  }
+
+  .active .rules__item:nth-child(4):before {
+    animation-delay: 1.8s;
+  }
+  .active .rules__link {
+    animation-delay: 2.2s;
+    .active .rules__item:before {
+      animation-duration: .3s;
+      animation-delay: .2s;
+    }
+  }
+    
+  .active .rules__item>p {
+    animation-delay: .3s;
+  }
+}
+@media (max-width: $mobile) {
+  .active .rules__item:nth-child(2):before {
+    animation-delay: 1s;
+  }
+  .active .rules__item:nth-child(3):before {
+    animation-delay: 1.5s;
+  }
+  .active .rules__item:nth-child(4):before {
+    animation-delay: 2s;
+  }
+  .active .rules__link {
+    animation-delay: 2.5s;
+  }
+
+  .active .rules__item>p {
+    animation-delay: .4s;
+  }
+}
+@keyframes rulesText {
+  0% {
+    opacity: 0;
+    transform: translate(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {    
+    transform: translate(0);
+    opacity: 1;
+  }
 }
 @keyframes widthBtn {
   0% {
+    color: #fff;
     opacity: 0;
-    width: 0;
+    transform: translate(100%);
   }
-  100% {
+  20% {
     opacity: 1;
-    width: 100%;
+  }
+  80% {
+    color: #fff;
+    opacity: 1;
+  }
+  100% {    
+    color: #5f458c;
+    transform: translate(0);
+    opacity: 1;
   }
 }
 @keyframes circleWidth {
