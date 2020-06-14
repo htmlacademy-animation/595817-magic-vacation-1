@@ -28,14 +28,17 @@ document.addEventListener(`DOMContentLoaded`, function () {
   document.body.addEventListener(`click`, function (e) {
     if (e.target.dataset.href === `prizes` || e.target.dataset.href === `game`) {
       document.querySelector(`.intermediate-bg`).style.height = `100%`;
-      setTimeout(() => document.querySelector(`.intermediate-bg`).style.height = `0`, 500);
+      setTimeout(function () {
+        document.querySelector(`.intermediate-bg`).style.height = `0`;
+      }, 500);
     }
   });
   document.body.addEventListener(`wheel`, function () {
     if (document.querySelector(`#prizes`).classList.contains(`active`) || document.querySelector(`#game`).classList.contains(`active`)) {
       document.querySelector(`.intermediate-bg`).style.height = `100%`;
-      setTimeout(() => document.querySelector(`.intermediate-bg`).style.height = `0`, 500);
+      setTimeout(function () {
+        document.querySelector(`.intermediate-bg`).style.height = `0`;
+      }, 500);
     }
   });
-
 });
