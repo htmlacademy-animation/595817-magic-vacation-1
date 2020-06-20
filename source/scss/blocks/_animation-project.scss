@@ -112,6 +112,21 @@
   animation-delay: 2s;
   animation-timing-function: linear;
 }
+.text__word {
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  & span {
+    transform: translate3d(0, 1em, 0);
+    display: inline-block;
+  }
+}
+
+.intro__title.active .text__word > span {
+  transform: translate3d(0, 0, 0);
+  
+}
+
 @media (max-width: $tablet) {
   .active .rules__item:nth-child(2):before {
     animation-delay: 1s;
