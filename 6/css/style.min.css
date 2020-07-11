@@ -1523,7 +1523,7 @@ img {
   font-family: "Radical", "Arial", sans-serif;
   font-weight: 400;
   font-size: 12rem;
-  line-height: 0.906;
+  line-height: 0.94;
   letter-spacing: -0.05em; }
   @media (min-width: 2000px) {
     .intro__title {
@@ -3541,17 +3541,49 @@ img {
     margin-left: 0;
     margin-right: 0; } }
 
-@keyframes Width {
-  0% {
-    opacity: 0;
-    width: 0; }
-  100% {
-    opacity: 1;
-    width: calc(100% - 21rem); } }
-
 section {
   background-repeat: no-repeat;
   background-size: cover; }
+
+.active .slider__controls {
+  width: 22rem;
+  animation-timing-function: ease-in-out;
+  animation-duration: .2s;
+  animation-delay: .1s;
+  animation-name: BtnSlider;
+  animation-fill-mode: forwards; }
+
+.active .slider__controls .slider__control--prev {
+  transform: rotate(-80deg);
+  animation-timing-function: linear;
+  animation-duration: .4s;
+  animation-delay: .1s;
+  animation-name: spin;
+  animation-fill-mode: forwards; }
+
+.active .slider__controls .slider__control--next {
+  transform: rotate(git 80deg);
+  animation-timing-function: linear;
+  animation-duration: .4s;
+  animation-delay: .1s;
+  animation-name: spin;
+  animation-fill-mode: forwards; }
+
+@keyframes spin {
+  to {
+    transform: rotate(0deg); } }
+
+@keyframes BtnSlider {
+  0% {
+    width: 23rem; }
+  90% {
+    width: 15.5rem; }
+  100% {
+    width: 17rem; } }
+
+.intro__label .text__word {
+  margin: 0;
+  overflow: inherit; }
 
 
 /*# sourceMappingURL=style.min.css.map*/

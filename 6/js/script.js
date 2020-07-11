@@ -10661,10 +10661,9 @@ document.addEventListener(`DOMContentLoaded`, function () {
       this._property = property;
       this._element = document.querySelector(this._elementSelector);
       this._timeOffset = 0;
-
+      
       this.prePareText();
     }
-
     createElement(letter) {
       const span = document.createElement(`span`);
       span.textContent = letter;
@@ -10672,12 +10671,11 @@ document.addEventListener(`DOMContentLoaded`, function () {
       this._timeOffset += 20;
       return span;
     }
-
     prePareText() {
       if (!this._element) {
         return;
       }
-      const text = this._element.textContent.trim().split(` `).filter((latter) => latter !== '');
+      const text = this._element.textContent.trim().split(` `).filter((latter)=>latter !== ``);
 
       const content = text.reduce((fragmentParent, word) => {
         const wordElement = Array.from(word).reduce((fragment, latter) => {
@@ -10694,7 +10692,6 @@ document.addEventListener(`DOMContentLoaded`, function () {
       this._element.innerHTML = ``;
       this._element.appendChild(content);
     }
-
     runAnimation() {
       if (!this._element) {
         return;
@@ -10707,9 +10704,13 @@ document.addEventListener(`DOMContentLoaded`, function () {
     }
   }
 
-  //const animationTopScreenTextLine = new AccentTypographyBuild(`.intro__title`, 500, `active`, `transform`);
-  setTimeout(() => {
+  const animationTopScreenTextLine = new AccentTypographyBuild(`.intro__title`, 500, `active`, `transform`);
+  const animationBottomScreenTextLine = new AccentTypographyBuild(`.intro__label`, 500, `active`, `transform`);
+  setTimeout(()=>{
     animationTopScreenTextLine.runAnimation();
+  }, 500);
+  setTimeout(() => {
+    animationBottomScreenTextLine.runAnimation();
   }, 500);
 });
 
