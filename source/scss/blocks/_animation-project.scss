@@ -112,6 +112,21 @@
   animation-delay: 2s;
   animation-timing-function: linear;
 }
+.text__word {
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  & span {
+    transform: translate3d(0, 1em, 0);
+    display: inline-block;
+  }
+}
+
+.intro__title.active .text__word > span {
+  transform: translate3d(0, 0, 0);
+  
+}
+
 @media (max-width: $tablet) {
   .active .rules__item:nth-child(2):before {
     animation-delay: 1s;
@@ -245,18 +260,51 @@
   }
 }
 
-@keyframes Width {
-  0% {
-    opacity: 0;
-    width: 0;
-  }
-
-  100% {
-    opacity: 1;
-    width: calc(100% - 21rem);
-  }
-}
 section {
   background-repeat: no-repeat;
   background-size: cover;
+}
+.active .slider__controls {
+   width: 22rem;
+   animation-timing-function: ease-in-out;
+   animation-duration: .2s;
+   animation-delay: .1s;
+   animation-name: BtnSlider;
+   animation-fill-mode: forwards;
+}
+.active .slider__controls .slider__control--prev {
+     transform: rotate(-80deg);
+     animation-timing-function: linear;
+     animation-duration: .4s;
+     animation-delay: .1s;
+     animation-name: spin;
+     animation-fill-mode: forwards;
+}
+.active .slider__controls .slider__control--next {
+  transform: rotate(git 80deg);
+  animation-timing-function: linear;
+  animation-duration: .4s;
+  animation-delay: .1s;
+  animation-name: spin;
+  animation-fill-mode: forwards;
+}
+@keyframes spin {
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes BtnSlider {
+  0% {
+    width: 23rem;
+  }
+  90% {
+    width: 15.5rem;
+  }
+  100% {
+    width: 17rem;
+  }
+}
+.intro__label .text__word {
+  margin: 0;
+  overflow: inherit
 }
