@@ -109,4 +109,11 @@ document.addEventListener(`DOMContentLoaded`, function () {
   setTimeout(() => {
     animationBottomScreenTextLine.runAnimation();
   }, 500);
-});   
+});
+
+// нужно подключить шейдеры (доделать!)
+const setup3dInfrastructure = () => {
+  const initialWidth = window.innerWidth;
+  const initialHeight = window.innerHeight;
+}
+// end
