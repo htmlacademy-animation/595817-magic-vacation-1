@@ -111,9 +111,12 @@ document.addEventListener(`DOMContentLoaded`, function () {
   }, 500);
 });
 
-// нужно подключить шейдеры (доделать!)
+// 1. нужно подключить шейдеры (доделать!)
 const setup3dInfrastructure = () => {
   const initialWidth = window.innerWidth;
   const initialHeight = window.innerHeight;
 }
+// end
+// 2. сцены со смещением цвета Hue
+
 // end
