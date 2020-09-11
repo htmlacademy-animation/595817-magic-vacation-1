@@ -136,3 +136,8 @@ const setup3dInfrastructure = () => {
 // 7. Источники света на сцену личного проекта
 
 // end
+
+// 11. RawShaderMaterial
+
+// end
+
