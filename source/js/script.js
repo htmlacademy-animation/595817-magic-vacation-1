@@ -109,4 +109,4 @@ document.addEventListener(`DOMContentLoaded`, function () {
   setTimeout(() => {
     animationBottomScreenTextLine.runAnimation();
   }, 500);
-});
+});   
