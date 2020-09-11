@@ -141,3 +141,8 @@ const setup3dInfrastructure = () => {
 
 // end
 
+// 12 . Замочная скважина
+
+// end
+
+
