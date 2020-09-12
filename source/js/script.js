@@ -149,4 +149,8 @@ const setup3dInfrastructure = () => {
 
 // end
 
+// 14.  ИИ «Соня»
+
+// end
+
 
